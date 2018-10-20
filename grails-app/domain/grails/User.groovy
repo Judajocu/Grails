@@ -13,7 +13,11 @@ class User implements Serializable {
 
     static constraints = {
 
-
+        username(unique: true, blank: false)
+        nombre(blank: false)
+        apellido(blank: false)
+        Datecreado(Date: true)
+        Dateactualizado(Date: true)
 
     }
 }

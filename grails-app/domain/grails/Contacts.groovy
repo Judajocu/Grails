@@ -17,5 +17,14 @@ class Contacts implements Serializable {
     static hasMany = [departments: Department]
 
     static constraints = {
+
+        nombre(blank: false)
+        apellido(blank: false)
+        email(unique: true, email: true, blank: false)
+        telefono(unique: true, blank: false)
+        direccion(blank: false)
+        Datecreado(Date: true)
+        Dateactualizado(Date: true)
+
     }
 }
