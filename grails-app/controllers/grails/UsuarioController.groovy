@@ -5,7 +5,9 @@ import static org.springframework.http.HttpStatus.*
 
 class UsuarioController {
 
-    UsuarioService usuarioService
+    static scaffold = Usuario
+
+    /*UsuarioService usuarioService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -95,5 +97,5 @@ class UsuarioController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
+    }*/
 }

@@ -5,7 +5,9 @@ import static org.springframework.http.HttpStatus.*
 
 class ContacsController {
 
-    ContacsService contacsService
+    static scaffold = Contacs
+
+    /*ContacsService contacsService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -95,5 +97,5 @@ class ContacsController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
+    }*/
 }

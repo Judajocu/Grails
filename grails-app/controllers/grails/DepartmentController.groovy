@@ -5,7 +5,9 @@ import static org.springframework.http.HttpStatus.*
 
 class DepartmentController {
 
-    DepartmentService departmentService
+    static scaffold = Department
+
+    /*DepartmentService departmentService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -95,5 +97,5 @@ class DepartmentController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
+    }*/
 }
