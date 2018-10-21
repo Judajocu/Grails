@@ -1,19 +1,15 @@
 package grails
 
-class Department implements Serializable {
+class Department {
 
     String nombre
 
-    Date Datecreado
-    Date Dateactualizado
 
-    static hasMany = [users: User, contacs: Contacts]
+    static hasMany = [users: Usuario, contacs: Contacs]
 
     static constraints = {
 
         nombre(unique: true, blank: false)
-        Datecreado(Date: true)
-        Dateactualizado(Date: true)
         users(nullable: false)
         contacs(nullable: false)
 

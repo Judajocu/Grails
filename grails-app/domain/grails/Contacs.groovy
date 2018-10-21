@@ -1,6 +1,6 @@
 package grails
 
-class Contacts implements Serializable {
+class Contacs {
 
     String nombre
     String apellido
@@ -10,8 +10,6 @@ class Contacts implements Serializable {
     String posicion
     String celular
 
-    Date Datecreado
-    Date Dateactualizado
 
     static belongsTo = [Department]
     static hasMany = [departments: Department]
@@ -23,8 +21,6 @@ class Contacts implements Serializable {
         email(unique: true, email: true, blank: false)
         telefono(unique: true, blank: false)
         direccion(blank: false)
-        Datecreado(Date: true)
-        Dateactualizado(Date: true)
 
     }
 }
