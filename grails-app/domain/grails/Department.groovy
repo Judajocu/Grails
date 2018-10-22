@@ -1,16 +1,24 @@
 package grails
 
-class Department {
+class Department implements Serializable {
 
     String nombre
 
+    static hasMany = [usuarios: Usuario, contacs: Contacs]
 
-    static hasMany = [users: Usuario, contacs: Contacs]
+
+    Set<Contacs> getContacts(){
+
+    }
+
+    Set<Usuario> getUsuarios(){
+
+    }
 
     static constraints = {
 
         nombre(unique: true, blank: false)
-        users(nullable: false)
+        //usuarios(nullable: false)
         contacs(nullable: false)
 
     }

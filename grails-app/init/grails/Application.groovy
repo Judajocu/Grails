@@ -3,6 +3,7 @@ package grails
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
 import org.grails.boot.internal.EnableAutoConfiguration
+import org.springframework.boot.SpringApplication
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 

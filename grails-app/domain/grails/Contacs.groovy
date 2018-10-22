@@ -1,6 +1,6 @@
 package grails
 
-class Contacs {
+class Contacs implements Serializable {
 
     String nombre
     String apellido
