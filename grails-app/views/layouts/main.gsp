@@ -10,6 +10,9 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 
     <asset:stylesheet src="application.css"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
 
     <g:layoutHead/>
 </head>
