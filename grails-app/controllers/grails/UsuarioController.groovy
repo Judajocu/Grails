@@ -7,6 +7,12 @@ class UsuarioController {
 
     static scaffold = Usuario
 
+    def index() {
+    }
+
+    def prueba() {
+    }
+
     /*UsuarioService usuarioService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
