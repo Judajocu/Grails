@@ -1,7 +1,6 @@
 package grails
 
 
-import  java.util.Date;
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
@@ -9,19 +8,45 @@ import groovy.transform.ToString
 @ToString(includes='username', includeNames=true, includePackage=false)
 class Usuario implements Serializable{
 
-    String nombre;
-    String apellido;
-    String username;
-    String password;
+    private static final long serialVersionUID = 1
 
-    static belongsTo = [Department]
+    transient springSecurityService
 
-    static constraints = {
-        nombre(blank: false)
-        apellido(blank: false)
-        username(unique: true, blank: false)
+    String username
+    String password
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
+
+    Set<Role> getAuthorities() {
+        UsuarioRoles.findAllByUsuario(this)*.roles
     }
 
-    static mapping = {password column: 'password'}
+    def beforeInsert() {
+        encodePassword()
+    }
 
+    def beforeUpdate() {
+        if (this.isDirty('password')) { //TODO: verificar en en foro.
+            encodePassword()
+        }
+    }
+
+    protected void encodePassword() {
+        password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
+    }
+
+    static transients = ['springSecurityService']
+
+    static constraints = {
+        username blank: false, unique: true
+        password blank: false, password: true
+
+    }
+
+    static mapping = {
+        table 'User'
+        password column: '`password`'
+    }
 }

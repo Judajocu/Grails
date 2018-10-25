@@ -22,4 +22,8 @@ class Department implements Serializable {
         contacs(nullable: false)
 
     }
+
+    static mapping = {
+        table 'Department'
+    }
 }

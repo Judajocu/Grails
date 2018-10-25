@@ -23,4 +23,8 @@ class Contacs implements Serializable {
         direccion(blank: false)
 
     }
+
+    static mapping = {
+        table 'Contacs'
+    }
 }
