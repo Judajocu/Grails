@@ -47,12 +47,10 @@ http://www.templatemo.com/tm-518-sentra
     <div id="main-nav" class="collapse navbar-collapse">
         <nav>
             <ul class="nav navbar-nav">
-                <li><a href="#top">Home</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#projects">Recent Projects</a></li>
-                <li><a href="#video">Presentation</a></li>
-                <li><a href="#blog">Blog Entries</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contacs/index">Contacs</a></li>
+                <li><a href="/department/index">Department</a></li>
+                <li><a href="/usuario/index">Users</a></li>
             </ul>
         </nav>
     </div>
@@ -60,50 +58,36 @@ http://www.templatemo.com/tm-518-sentra
 
 <div class="sidebar-navigation hidde-sm hidden-xs">
     <div class="logo">
-        <a href="#">Sen<em>tra</em></a>
+        <a href="/">Grails<em></em></a>
     </div>
     <nav>
         <ul>
             <li>
-                <a href="#top">
+                <a href="/">
                     <span class="rect"></span>
                     <span class="circle"></span>
                     Home
                 </a>
             </li>
             <li>
-                <a href="#featured">
+                <a href="/contacs/index">
                     <span class="rect"></span>
                     <span class="circle"></span>
-                    Featured
+                    Contacs
                 </a>
             </li>
             <li>
-                <a href="#projects">
+                <a href="/department/index">
                     <span class="rect"></span>
                     <span class="circle"></span>
-                    Recent Work
+                    Department
                 </a>
             </li>
             <li>
-                <a href="#video">
+                <a  href="/usuario/index">
                     <span class="rect"></span>
                     <span class="circle"></span>
-                    Presentation
-                </a>
-            </li>
-            <li>
-                <a href="#blog">
-                    <span class="rect"></span>
-                    <span class="circle"></span>
-                    Blog Entires
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                    <span class="rect"></span>
-                    <span class="circle"></span>
-                    Contact Us
+                    Users
                 </a>
             </li>
         </ul>
@@ -124,6 +108,14 @@ http://www.templatemo.com/tm-518-sentra
 
         <g:layoutBody/>
     </section>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <section class="footer">
