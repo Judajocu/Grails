@@ -11,14 +11,14 @@ class Department implements Serializable {
 
     }
 
-    Set<Usuario> getUsuarios(){
+    Set<Usuario> getUsuario(){
 
     }
 
     static constraints = {
 
         nombre(unique: true, blank: false)
-        //usuarios(nullable: false)
+        usuarios(nullable: false)
         contacs(nullable: false)
 
     }

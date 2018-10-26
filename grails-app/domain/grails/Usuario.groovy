@@ -19,8 +19,10 @@ class Usuario implements Serializable{
     boolean accountLocked
     boolean passwordExpired
 
+    static belongsTo = [Department]
+
     Set<Role> getAuthorities() {
-        UsuarioRoles.findAllByUsuario(this)*.roles
+        UsuarioRole.findAllByUsuario(this)*.roles
     }
 
     def beforeInsert() {
