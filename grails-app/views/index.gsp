@@ -5,16 +5,12 @@
 </head>
 <body>
 
-    <div class="svg" role="presentation">
-        <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-        </div>
-    </div>
+<g:link controller="usuario" class="btn-normal btn-extra">
+    Usuario
+</g:link>
 
     <div id="content" role="main">
         <section class="row colset-2-its">
-
-
             <div id="controllers" class="table-row-cell" role="navigation">
                 <h2>Available Controllers:</h2>
                 <ul class="list-group-item-heading">

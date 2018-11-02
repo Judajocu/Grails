@@ -2,15 +2,41 @@ package grails
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
+import grails.Usuario;
 
 class UsuarioController {
 
+    def usuarioService;
     static scaffold = Usuario
 
     def index() {
     }
 
     def prueba() {
+    }
+
+    def list() {
+        def listaUsuarios=Usuario.list(); // Todos los estudiantes.
+
+        //Retornando datos a la vista....
+        [listaU: listaUsuarios]
+    }
+
+    def delete(Long id) {
+        if (id == null){
+            //notFound()
+            return
+        }
+
+        usuarioService.delete(id)
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
+                redirect action:"index", method:"GET"
+            }
+            '*'{ render status: NO_CONTENT }
+        }
     }
 
     /*UsuarioService usuarioService

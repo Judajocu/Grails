@@ -25,6 +25,7 @@ http://www.templatemo.com/tm-518-sentra
     <asset:stylesheet src="css/light-box.css"/>
     <asset:stylesheet src="css/owl-carousel.css"/>
     <asset:stylesheet src="css/templatemo-style.css"/>
+    <asset:stylesheet src="css/detalles.css"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
@@ -84,11 +85,11 @@ http://www.templatemo.com/tm-518-sentra
                 </a>
             </li>
             <li>
-                <a  href="/usuario/index">
+                <g:link controller="usuario" >
                     <span class="rect"></span>
                     <span class="circle"></span>
-                    Users
-                </a>
+                    Usuario
+                </g:link>
             </li>
         </ul>
     </nav>
