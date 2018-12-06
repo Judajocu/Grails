@@ -9,6 +9,8 @@ class Contacs implements Serializable {
     String direccion
     String posicion
     String celular
+    String categorias
+    Set departments = []
 
 
     //static belongsTo = [Department]

@@ -4,7 +4,7 @@ class Department implements Serializable {
 
     String nombre
 
-    //static belongsTo = [Contacs]
+    static belongsTo = [Contacs]
     static hasMany = [usuarios: Usuario, contacs: Contacs]
 
 

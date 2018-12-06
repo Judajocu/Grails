@@ -27,7 +27,15 @@
             </g:hasErrors>
             <g:form resource="${this.contacs}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="contacs"/>
+                    <f:field bean="contacs" property="nombre"/>
+                    <f:field bean="contacs" property="apellido"/>
+                    <f:field bean="contacs" property="email"/>
+                    <f:field bean="contacs" property="telefono"/>
+                    <f:field bean="contacs" property="direccion"/>
+                    <f:field bean="contacs" property="posicion"/>
+                    <f:field bean="contacs" property="celular"/>
+                    <f:field bean="contacs" property="departments"/>
+                    <f:field bean="contacs" property="categorias"/>
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
