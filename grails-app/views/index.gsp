@@ -5,24 +5,38 @@
 </head>
 <body>
 
-<g:link controller="usuario" class="btn-normal btn-extra">
-    Usuario
-</g:link>
 
-    <div id="content" role="main">
-        <section class="row colset-2-its">
-            <div id="controllers" class="table-row-cell" role="navigation">
-                <h2>Available Controllers:</h2>
-                <ul class="list-group-item-heading">
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                        </li>
-                    </g:each>
-                </ul>
-            </div>
-        </section>
+<br/>
+<h1>Menu de Inicio</h1>
+<br/>
+<legend></legend>
+<br/>
+<center>
+    <div>
+        <g:link controller="usuario" class="btn-normal btn-extra">
+            Usuario
+        </g:link>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <g:link controller="department" class="btn-normal btn-extra">
+            Departamentos
+        </g:link>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <g:link controller="contacs" class="btn-normal btn-extra">
+            Contactos
+        </g:link>
+    </div>
+</center>
+<br/>
+<br/>
+<legend></legend>
 
 </body>
 </html>

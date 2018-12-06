@@ -7,7 +7,7 @@ class ContacsController {
 
     static scaffold = Contacs
 
-    /*ContacsService contacsService
+    def contacsService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -97,5 +97,5 @@ class ContacsController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }*/
+    }
 }
