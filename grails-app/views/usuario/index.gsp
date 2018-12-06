@@ -8,21 +8,21 @@
     </head>
     <body>
 
-    <a style="float: left; margin-left: 20px" href="${createLink(uri: '/')}" class="btn-normal btn-extra">Volver</a>
+    <a style="float: left; margin-left: 20px" href="${createLink(uri: '/')}" class="btn-normal btn-extra"><g:message code="volver" /></a>
     <br/>
-    <h1>Lista de usuarios registrados</h1>
+    <h1><g:message code="gestion.usuarios" /></h1>
     <br/>
     <legend></legend>
     <br/>
         <center>
             <div>
-                <g:link controller="usuario" action="create" class="btn-normal btn-extra">Crear usuario</g:link>
+                <g:link controller="usuario" action="create" class="btn-normal btn-extra"><g:message code="create.user" /></g:link>
             </div>
             <br/>
             <br/>
             <br/>
             <div>
-                <g:link controller="usuario" action="list" class="btn-normal btn-extra">Ver lista de usuarios</g:link>
+                <g:link controller="usuario" action="list" class="btn-normal btn-extra"><g:message code="lista.users" /></g:link>
             </div>
         </center>
     <br/>

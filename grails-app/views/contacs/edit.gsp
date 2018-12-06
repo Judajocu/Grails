@@ -6,7 +6,7 @@
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
-    <g:link controller="contacs" action="list" class="btn-normal btn-extra" style="float: left; margin-left: 20px">Volver</g:link>
+    <g:link controller="contacs" action="list" class="btn-normal btn-extra" style="float: left; margin-left: 20px"><g:message code="volver" /></g:link>
     <br/>
     <h1><g:message code="editar.contacto"/></h1>
     <br/>

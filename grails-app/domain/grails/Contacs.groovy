@@ -5,10 +5,10 @@ class Contacs implements Serializable {
     String nombre
     String apellido
     String email
-    String telefono
+    Long telefono
     String direccion
     String posicion
-    String celular
+    Long celular
     String categorias
     Set departments = []
 

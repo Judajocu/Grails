@@ -6,7 +6,7 @@
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
-    <g:link controller="department" action="list" class="btn-normal btn-extra" style="float: left; margin-left: 20px">Volver</g:link>
+    <g:link controller="department" action="list" class="btn-normal btn-extra" style="float: left; margin-left: 20px"><g:message code="volver" /></g:link>
     <br/>
     <h1><g:message code="detalles.departamento"/></h1>
     <br/>

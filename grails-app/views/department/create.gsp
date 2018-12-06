@@ -6,7 +6,7 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-    <g:link controller="department" class="btn-normal btn-extra" style="float: left; margin-left: 20px" >Volver</g:link>
+    <g:link controller="department" class="btn-normal btn-extra" style="float: left; margin-left: 20px" ><g:message code="volver" /></g:link>
     <br/>
     <h1><g:message code="registrar.departamento"/></h1>
     <br/>
