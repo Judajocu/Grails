@@ -11,8 +11,12 @@ class Contacs implements Serializable {
     String celular
 
 
-    static belongsTo = [Department]
+    //static belongsTo = [Department]
     static hasMany = [departments: Department]
+
+    Set<Department> getDepartment(){
+
+    }
 
     static constraints = {
 
@@ -21,6 +25,8 @@ class Contacs implements Serializable {
         email(unique: true, email: true, blank: false)
         telefono(unique: true, blank: false)
         direccion(blank: false)
+        departments(nullable: false)
+        categorias (blank: true)
 
     }
 

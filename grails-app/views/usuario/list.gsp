@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="blank" />
+    <meta name="layout" content="main" />
     <g:set var="entityName" value="${message(code: 'usuario.label', default: 'Usuario')}" />
 
     <title>Usuarios-lista</title>

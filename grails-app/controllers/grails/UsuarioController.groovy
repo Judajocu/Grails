@@ -8,6 +8,8 @@ class UsuarioController {
 
     def usuarioService;
     static scaffold = Usuario
+    static transactional = true
+
 
     def index() {
     }
@@ -28,7 +30,11 @@ class UsuarioController {
             return
         }
 
-        usuarioService.delete(id)
+        def user = Usuario.get(id)
+        println("username"+ user.username)
+        user.delete()
+        //println("llega aqui"+ id)
+        //usuarioService.delete(id)
 
         request.withFormat {
             form multipartForm {
@@ -39,14 +45,10 @@ class UsuarioController {
         }
     }
 
-    /*UsuarioService usuarioService
-
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
-    def index(Integer max) {
+    /*def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond usuarioService.list(params), model:[usuarioCount: usuarioService.count()]
-    }
+    }*/
 
     def show(Long id) {
         respond usuarioService.get(id)
@@ -104,22 +106,6 @@ class UsuarioController {
         }
     }
 
-    def delete(Long id) {
-        if (id == null) {
-            notFound()
-            return
-        }
-
-        usuarioService.delete(id)
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-                redirect action:"index", method:"GET"
-            }
-            '*'{ render status: NO_CONTENT }
-        }
-    }
 
     protected void notFound() {
         request.withFormat {
@@ -129,5 +115,5 @@ class UsuarioController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }*/
+    }
 }

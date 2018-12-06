@@ -20,6 +20,7 @@ class Usuario implements Serializable{
     boolean passwordExpired
 
     static belongsTo = [Department]
+    static hasMany = [department: Department]
 
     Set<Role> getAuthorities() {
         UsuarioRole.findAllByUsuario(this)*.roles
