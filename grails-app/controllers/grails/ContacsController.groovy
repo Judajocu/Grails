@@ -20,6 +20,13 @@ class ContacsController {
         respond contacsService.get(id)
     }
 
+    def list() {
+        def listaContactos=Contacs.list(); // Todos los estudiantes.
+
+        //Retornando datos a la vista....
+        [listaC: listaContactos]
+    }
+
     def create() {
         respond new Contacs(params)
     }

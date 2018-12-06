@@ -30,11 +30,11 @@ class UsuarioController {
             return
         }
 
-        def user = Usuario.get(id)
-        println("username"+ user.username)
-        user.delete()
+        //def user = Usuario.get(id)
+        //println("username"+ user.username)
+        //user.delete()
         //println("llega aqui"+ id)
-        //usuarioService.delete(id)
+        usuarioService.delete(id)
 
         request.withFormat {
             form multipartForm {

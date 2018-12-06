@@ -6,23 +6,25 @@
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#list-contacs" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-            </ul>
+    <a style="float: left; margin-left: 20px" href="${createLink(uri: '/')}" class="btn-normal btn-extra">Volver</a>
+    <br/>
+    <h1>gestion de Contactos</h1>
+    <br/>
+    <legend></legend>
+    <br/>
+    <center>
+        <div>
+            <g:link controller="contacs" action="create" class="btn-normal btn-extra">Crear Contactos</g:link>
         </div>
-        <div id="list-contacs" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-                <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <f:table collection="${contacsList}" />
-
-            <div class="pagination">
-                <g:paginate total="${contacsCount ?: 0}" />
-            </div>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <g:link controller="contacs" action="list" class="btn-normal btn-extra">Ver lista de Contactos</g:link>
         </div>
+    </center>
+    <br/>
+    <br/>
+    <legend></legend>
     </body>
 </html>

@@ -80,6 +80,7 @@ class DepartmentController {
     }
 
     def delete(Long id) {
+        println "id: " + id
         if (id == null) {
             notFound()
             return

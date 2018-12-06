@@ -25,9 +25,6 @@
             <th>
                 Editar
             </th>
-            <th>
-                Borrar
-            </th>
             </thead>
             <tbody>
             <g:each in="${listaD}" var="est">
@@ -35,7 +32,6 @@
                     <td>${est.nombre}</td>
                     <td><g:link controller="department" action="show" id="${est.id}" >Mostrar</g:link></td>
                     <td><g:link controller="department" action="edit" id="${est.id}" >Editar</g:link></td>
-                    <td><g:link controller="department" action="delete" id="${est.id}" params="[id:est.id]" >Eliminar</g:link></td>
                 </tr>
             </g:each>
             </tbody>
